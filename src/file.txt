@@ -1,0 +1,4 @@
+Just is a
+pure text file
+with 5 lines
+including an empty line in the last line
