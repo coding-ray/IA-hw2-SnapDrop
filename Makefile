@@ -20,7 +20,6 @@ main: $(MAIN_SRC)/Main.java $(OUT)
 	@echo $(MAIN_MAIN) | tee --append $(MANIFEST) > /dev/null
 	@cd $(OUT); \
 	jar cfm0 $(APP) ../$(MANIFEST) \
-	$(PACKAGE_PREFIX)/test/*.class \
 	$(PACKAGE_PREFIX)/neardrop/*.class
 
 run: $(OUT)/$(APP)

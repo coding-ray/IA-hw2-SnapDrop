@@ -43,6 +43,7 @@ public class Main {
     serverThreads.add(new Thread(serverObjects.get(0), "Server 1"));
     clientThreads.add(new Thread(clientObjects.get(0), "Client 1"));
     serverThreads.get(0).start();
+    Utils.sleep(100);
     clientThreads.get(0).start();
   }
 

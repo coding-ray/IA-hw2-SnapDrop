@@ -59,7 +59,7 @@ public class Client implements Runnable {
       try {
         int option = Integer.parseInt(input);
         if (option >= 0 && option < index) {
-          // requestNewServer(hosts.get(option));
+          requestNewServer(hosts.get(option));
           sendMessage("Test");
         } else
           throw new IndexOutOfBoundsException("Index must in the range of [0," + index + "].");

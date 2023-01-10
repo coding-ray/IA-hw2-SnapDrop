@@ -68,7 +68,9 @@ public class Server implements Runnable {
      */
     System.out.println("ServerSocket awaiting connections...");
     clientSockets.add(serverSocket.accept()); // blocking call
+    Utils.sleep(1000);
     Socket clientSocket = clientSockets.get(clientSockets.size() - 1);
+    System.out.println(clientSockets.size() - 1);
     DataInputStream dataInputStream = new DataInputStream(clientSocket.getInputStream());
     return dataInputStream.readUTF();
   }
